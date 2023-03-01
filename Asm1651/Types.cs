@@ -6,7 +6,7 @@
         public string PublicationDate { get; set; }
         public int Price { get; set; }
         public Type() { }
-        public virtual void display()
+        public virtual void Display()
         {
             Console.WriteLine($"Name: {Name} \nPublication Date: {PublicationDate} \nPrice: {Price}");
         }
@@ -17,12 +17,12 @@
         public Book() { }
         public Book(string name, string publicationdate, int price, string author)
         {
-            Name = name;
+            this.Name = name;
             this.PublicationDate = publicationdate;
             this.Price = price;
             this.Author = author;
         }
-        public override void display()
+        public override void Display()
         {
             Console.WriteLine("-------Book Info-------");
             Console.WriteLine($"Book Name: {Name} \nPublication Date: {PublicationDate} \nBook Price: {Price}\nBook Author: {Author}");
@@ -39,7 +39,7 @@
             this.Price = price;
             this.Publisher = publisher;
         }
-        public override void display()
+        public override void Display()
         {
             Console.WriteLine("-------Magazine Info-------");
             Console.WriteLine($"Magazine Name: {Name} \nPublication Date: {PublicationDate} \nMagazine Price: {Price}\nMagazine Publisher: {Publisher}");
