@@ -26,43 +26,41 @@
                     Console.WriteLine("-------End-------");
                     Console.Write($"Please enter a password to proceed\nPassword: ");
                     string password = Console.ReadLine();
-                    do
-                        if (password.Equals("admin"))
+                    if (password.Equals("admin"))
+                    {
+                        int n;
+                        do
                         {
-                            int n;
-                            do
+                            Console.WriteLine("-------Admin Menu-------");
+                            Console.WriteLine($"1:View available book & magazine\n2:Search book by name\n3:Add new book \n4:Delete book\n5:Back\n6:Exit Program");
+                            Console.WriteLine("Choose your option: ");
+                            Console.WriteLine("-------Option Choose-------");
+                            n = int.Parse(Console.ReadLine());
+                            switch (n)
                             {
-                                Console.WriteLine("-------Admin Menu-------");
-                                Console.WriteLine($"1:View available book & magazine\n2:Search book by name\n3:Add new book \n4:Delete book\n5:Back\n6:Exit Program");
-                                Console.WriteLine("Choose your option: ");
-                                Console.WriteLine("-------Option Choose-------");
-                                n = int.Parse(Console.ReadLine());
-                                switch (n)
-                                {
-                                    case 1:
-                                        admin.ViewAllBook(typelist);
-                                        break;
-                                    case 2:
-                                        admin.SearchBookByName(typelist);
-                                        break;
-                                    case 3:
-                                        admin.AddBook(typelist);
-                                        break;
-                                    case 4:
-                                        admin.DeleteBook(typelist);
-                                        break;
-                                    case 6:
-                                        Console.WriteLine("-------End-------");
-                                        Console.WriteLine("Good Bye!");
-                                        Environment.Exit(0);
-                                        break;
-                                    default:
-                                        break;
-                                }
-                            } while (n != 5);
-                        }
-                        else Console.WriteLine("Wrong Password!");
-                    while (!option.Equals("Back"));
+                                case 1:
+                                    admin.ViewAllBook(typelist);
+                                    break;
+                                case 2:
+                                    admin.SearchBookByName(typelist);
+                                    break;
+                                case 3:
+                                    admin.AddBook(typelist);
+                                    break;
+                                case 4:
+                                    admin.DeleteBook(typelist);
+                                    break;
+                                case 6:
+                                    Console.WriteLine("-------End-------");
+                                    Console.WriteLine("Good Bye!");
+                                    Environment.Exit(0);
+                                    break;
+                                default:
+                                    break;
+                            }
+                        } while (n != 5);
+                    }
+                    else Console.WriteLine("Wrong Password!");
                 }
                 else if (option.Equals("2"))
                 {
