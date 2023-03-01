@@ -10,7 +10,7 @@
         {
             foreach (var item in itemlist)
             {
-                item.display();
+                item.Display();
             }
         }
         public void SearchBookByName(List<Type> typelist)
@@ -22,7 +22,7 @@
             {
                 if (type.Name.Equals(Name))
                 {
-                    type.display();
+                    type.Display();
                 }
             }
         }
