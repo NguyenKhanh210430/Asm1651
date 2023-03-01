@@ -10,14 +10,14 @@
         {
             this.user = user;
         }
-        public void AddItem(List<Type> typelist, string name)
+        public void AddType(List<Type> typelist, string name)
         {
             foreach (var type in typelist)
                 if (type.Name.Equals(name))
                     types.Add(type);
             TotalCost();
         }
-        public void RemoveItem(List<Type> typelist, string name)
+        public void RemoveType(List<Type> typelist, string name)
         {
             foreach (var type in typelist)
                 if (type.Name.Equals(name))

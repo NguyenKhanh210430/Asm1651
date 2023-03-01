@@ -83,12 +83,12 @@
                             case 3:
                                 Console.WriteLine("Enter book name: ");
                                 string Addname = Console.ReadLine();
-                                order.AddItem(typelist, Addname);
+                                order.AddType(typelist, Addname);
                                 break;
                             case 4:
                                 Console.WriteLine("Enter book name: ");
                                 string Removename = Console.ReadLine();
-                                order.RemoveItem(typelist, Removename);
+                                order.RemoveType(typelist, Removename);
                                 break;
                             case 5:
                                 Console.WriteLine("-------End-------");
