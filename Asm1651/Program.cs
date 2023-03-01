@@ -29,15 +29,15 @@
                     do
                         if (password.Equals("admin"))
                         {
-                            int x;
+                            int n;
                             do
                             {
                                 Console.WriteLine("-------Admin Menu-------");
                                 Console.WriteLine($"1:View available book & magazine\n2:Search book by name\n3:Add new book \n4:Delete book\n5:Back\n6:Exit Program");
                                 Console.WriteLine("Choose your option: ");
                                 Console.WriteLine("-------Option Choose-------");
-                                x = int.Parse(Console.ReadLine());
-                                switch (x)
+                                n = int.Parse(Console.ReadLine());
+                                switch (n)
                                 {
                                     case 1:
                                         admin.ViewAllBook(typelist);
@@ -59,22 +59,22 @@
                                     default:
                                         break;
                                 }
-                            } while (x != 5);
+                            } while (n != 5);
                         }
                         else Console.WriteLine("Wrong Password!");
                     while (!option.Equals("Back"));
                 }
                 else if (option.Equals("2"))
                 {
-                    int x;
+                    int n;
                     do
                     {
                         Console.WriteLine("-------User Menu-------");
                         Console.WriteLine($"1:View available book\n2:Find book by name\n3:Add book to order\n4:Remove book from order\n5:Check out\n6:Back to Menu\n7:Exit Program.");
                         Console.WriteLine("Choose your option:");
                         Console.WriteLine("-------Option Choose-------");
-                        x = int.Parse(Console.ReadLine());
-                        switch (x)
+                        n = int.Parse(Console.ReadLine());
+                        switch (n)
                         {
                             case 1:
                                 user.ViewAllBook(typelist);
@@ -107,7 +107,7 @@
                             default:
                                 break;
                         }
-                    } while (x != 6);
+                    } while (n != 6);
                 }
                 else if (option.Equals("3"))
                 {
