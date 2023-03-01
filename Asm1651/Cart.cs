@@ -2,7 +2,7 @@
 {
     internal class Cart
     {
-        public int Total { get; set; }
+        public int Total;
         public List<Type> types = new List<Type>();
         public User user;
         public Purchase cash;
@@ -35,7 +35,7 @@
         }
         public void Purchase()
         {
-            Console.Write($"Total: {TotalCost}");
+            Console.Write($"Total: {Total}");
             {
                 Console.Write(" | Pay by cash, amount: ");
                 int number = int.Parse(Console.ReadLine());
@@ -48,6 +48,7 @@
                         str += type.Name + " ";
                     }
                     Console.WriteLine($"Book: {str}\nPayment: {cash}");
+                    Console.WriteLine($"Success!");
                 }
                 else Console.WriteLine("Paid amount cant be lower than the total price");
             }
